@@ -23,6 +23,7 @@ const ChangePassword = () => {
                 variant: 'danger',
             }))
             setIsLoading(false);
+            return;
         }
         try {
             await axios.post(`/users/reset_password/${code}`, { password })
