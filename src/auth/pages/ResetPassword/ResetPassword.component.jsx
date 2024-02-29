@@ -18,7 +18,7 @@ const ResetPassword = () => {
     const submit = async ({ email }) => {
         setIsLoading(true);
         try {
-            const frontBaseUrl = location.protocol + '//' + location.host;
+            const frontBaseUrl = `${location.protocol}//${location.host}/auth/reset_password`;
             const body = { email, frontBaseUrl }
             await axios.post('/users/reset_password', body);
             navigate('/auth/login');

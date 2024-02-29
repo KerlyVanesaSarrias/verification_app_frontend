@@ -15,7 +15,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const submit = async userData => {
-    const frontBaseUrl = location.protocol + '//' + location.host;
+    const frontBaseUrl = `${location.protocol}//${location.host}/auth/verify_email`;
     const body = { ...userData, frontBaseUrl }
     setIsLoading(true);
     try {
